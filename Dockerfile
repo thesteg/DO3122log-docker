@@ -22,4 +22,4 @@ USER appuser
 WORKDIR /app
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD ["python", "do3122log.py"]
+CMD ["python", "do3122.py"]
