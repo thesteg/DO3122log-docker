@@ -1,1 +1,2 @@
-ACTION=="add", SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", GROUP="users", MODE="0666", SYMLINK+="do3122link"
+ACTION=="add", SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", GROUP="users", MODE="0666", SYMLINK+="do3122link", RUN+="/usr/bin/systemctl --no-block start do3122log.service"
+ACTION=="remove", SUBSYSTEM=="usb", ENV{ID_MODEL_FROM_DATABASE}=="CH340 serial converter", RUN+="/usr/bin/systemctl --no-block stop do3122log.service"

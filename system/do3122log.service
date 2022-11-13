@@ -1,0 +1,12 @@
+[Unit]
+Description=DO3122 USB Monitor
+Requires=docker.service
+After=network.target docker.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash /opt/do3122log/do3122log.sh start
+ExecStop=/usr/bin/bash /opt/do3122log/do3122log.sh stop
+
+[Install]
+WantedBy=multi-user.target

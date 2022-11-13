@@ -7,4 +7,5 @@ fi
 cp system/99-do3122.rules /etc/udev/rules.d/
 udevadm control --reload-rules
 
-cp start.sh /opt/do3122/
+cp system/do3122log.service /etc/systemd/system/
+cp do3122log.sh /opt/do3122log/
